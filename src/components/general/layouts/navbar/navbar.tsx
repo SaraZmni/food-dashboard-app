@@ -18,7 +18,7 @@ const Navbar: FC = () => {
     { path: "/contact", link: "Contact" },
   ];
   return (
-    <header className="bg-blue-200 text-white">
+    <header className="bg-primary text-white">
       <nav className="px-4 py-4 max-w-7xl mx-auto flex justify-between items-center">
         <a href="/" className="text-xl font-bold text-white">
           Design <span className="text-orange-400">DK</span>
