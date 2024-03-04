@@ -1,10 +1,12 @@
 import { FC } from "react";
+import menuImage from "../../static/images/menu.png";
 
 const Banner: FC = () => {
   return (
     <div className="grid grid-cols-3 bg-primary mt-3 rounded-lg md:size-auto mx-8">
       <div></div>
       <div className="row-auto flex flex-col justify-center items-center">
+        <img src={menuImage} />
         <h3 className="tracking-wide text-orange-600 text-lg ml-6">
           $0 delivery for 30 days!&nbsp;&nbsp;&nbsp;🎉
         </h3>
