@@ -30,6 +30,7 @@
             "@routes/*": ["routes/*"],
             "@helpers/*": ["helpers/*"],
             "@configs/*": ["configs/*"],
+            "@static/*":["static/*"]
           }
     },
     "include": [
