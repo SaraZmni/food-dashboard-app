@@ -47,19 +47,21 @@ module.exports = [
                     exclude:/node_modules/,
                     use: ['style-loader', 'css-loader', 'postcss-loader'],
                 },
+               
                 {
+                    test: /\.(eot|svg|ttf|woff|woff2)$/,
+                    type: 'asset/resource',
+                    generator: {
+                      filename: 'static/fonts/[name][ext]',
+                    },
+                  },
+                  {
                     test: /\.(png)$/i,
-                    use: [
-                      {
-                        loader: 'file-loader',
-                        options: {
-                          name: '[name].[ext]',
-                          outputPath: 'static/images',
-                        },
-                      },
-                    ],
-                },
-              
+                    type: 'asset/resource',
+                    generator: {
+                      filename: 'static/images/[name][ext]',
+                    },
+                  },
             ]
         },
         devServer: {

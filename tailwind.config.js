@@ -13,7 +13,12 @@ module.exports = {
         success:'#42c486',
         light:'#ffeae6'
       },
+      fontFamily: {
+        vazir: ['Vazir'],
+        iransans:['IranSans']
+      },
     },
+    
     
   },
   variants: {
