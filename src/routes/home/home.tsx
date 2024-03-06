@@ -1,6 +1,7 @@
 import { FC } from "react";
 import Banner from "@components/general/layouts/banner/banner";
 import Card from "@components/card/card";
+import { Tabs, Tab } from "@components/general/ui-kit/Tabs/tabs";
 
 import { FaAngleLeft } from "react-icons/fa6";
 import { FaAngleRight } from "react-icons/fa6";
@@ -59,6 +60,78 @@ const Home: FC = () => {
             date={item.date}
           />
         ))}
+      </div>
+
+      {/*------------------------------ Tabs -----------------------------*/}
+      <div className="flex justify-between mx-10 my-10 font-vazir">
+        <div className="my-6 w-3/4">
+          <Tabs>
+            <Tab label="شام">
+              <div className="py-4">
+                <h2 className="text-lg font-medium mb-2">Tab 1 Content</h2>
+                <p className="text-gray-700">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Maxime mollitia, molestiae quas vel sint commodi repudiandae
+                  consequuntur voluptatum laborum numquam blanditiis harum
+                  quisquam eius sed odit fugiat iusto fuga praesentium optio,
+                  eaque rerum! Provident similique accusantium nemo autem.
+                  Veritatis obcaecati tenetur iure eius earum ut molestias
+                  architecto voluptate aliquam nihil, eveniet aliquid culpa
+                  officia aut! Impedit sit sunt quaerat, odit, tenetur error,
+                  harum nesciunt ipsum debitis quas aliquid. Reprehenderit,
+                  quia. Quo neque error repudiandae fuga? Ipsa laudantium
+                  molestias eos sapiente officiis modi at sunt excepturi
+                  expedita sint? Sed quibusdam recusandae alias error harum
+                  maxime adipisci amet laborum.
+                </p>
+              </div>
+            </Tab>
+            <Tab label="ناهار">
+              <div className="py-4">
+                <h2 className="text-lg font-medium mb-2">Tab 2 Content</h2>
+                <p className="text-gray-700">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Maxime mollitia, molestiae quas vel sint commodi repudiandae
+                  consequuntur voluptatum laborum numquam blanditiis harum
+                  quisquam eius sed odit fugiat iusto fuga praesentium optio,
+                  eaque rerum! Provident similique accusantium nemo autem.
+                  Veritatis obcaecati tenetur iure eius earum ut molestias
+                  architecto voluptate aliquam nihil, eveniet aliquid culpa
+                  officia aut! Impedit sit sunt quaerat, odit, tenetur error,
+                  harum nesciunt ipsum debitis quas aliquid. Reprehenderit,
+                  quia. Quo neque error repudiandae fuga? Ipsa laudantium
+                  molestias eos sapiente officiis modi at sunt excepturi
+                  expedita sint? Sed quibusdam recusandae alias error harum
+                  maxime adipisci amet laborum.
+                </p>
+              </div>
+            </Tab>
+            <Tab label="صبحانه">
+              <div className="py-4">
+                <h2 className="text-lg font-medium mb-2">Tab 3 Content</h2>
+                <p className="text-gray-700">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Maxime mollitia, molestiae quas vel sint commodi repudiandae
+                  consequuntur voluptatum laborum numquam blanditiis harum
+                  quisquam eius sed odit fugiat iusto fuga praesentium optio,
+                  eaque rerum! Provident similique accusantium nemo autem.
+                  Veritatis obcaecati tenetur iure eius earum ut molestias
+                  architecto voluptate aliquam nihil, eveniet aliquid culpa
+                  officia aut! Impedit sit sunt quaerat, odit, tenetur error,
+                  harum nesciunt ipsum debitis quas aliquid. Reprehenderit,
+                  quia. Quo neque error repudiandae fuga? Ipsa laudantium
+                  molestias eos sapiente officiis modi at sunt excepturi
+                  expedita sint? Sed quibusdam recusandae alias error harum
+                  maxime adipisci amet laborum.
+                </p>
+              </div>
+            </Tab>
+          </Tabs>
+        </div>
+        <div className="relative w-1/5 h-6 my-2 text-xl mx-auto text-center">
+          مشاهده و سفارش غذا
+          <div className="absolute right-0 w-1/2 h-1.5 bg-secondary -bottom-3 transform -translate-x-1/2"></div>
+        </div>
       </div>
     </>
   );
