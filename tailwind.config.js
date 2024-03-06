@@ -15,7 +15,6 @@ module.exports = {
       },
       fontFamily: {
         vazir: ['Vazir'],
-        iransans:['IranSans']
       },
     },
     
