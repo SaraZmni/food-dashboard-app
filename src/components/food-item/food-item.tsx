@@ -1,4 +1,5 @@
 import { FC } from "react";
+import food from "@static/images/tumbnail/food.png";
 
 const FoodItem: FC = () => {
   return (
@@ -9,7 +10,7 @@ const FoodItem: FC = () => {
       </span>
       <img
         className="w-64 mx-auto transform transition duration-300 hover:scale-105"
-        src={""}
+        src={food}
         // src={image}
         alt=""
       />
