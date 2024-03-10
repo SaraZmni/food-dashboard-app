@@ -1,9 +1,11 @@
 import { FC } from "react";
 import Banner from "@components/general/layouts/banner/banner";
 import Card from "@components/card/card";
+import { Tabs, Tab } from "@components/general/ui-kit/Tabs/tabs";
 
 import { FaAngleLeft } from "react-icons/fa6";
 import { FaAngleRight } from "react-icons/fa6";
+import { FoodItem } from "@components/food-item";
 
 const Home: FC = () => {
   const data = [
@@ -59,6 +61,36 @@ const Home: FC = () => {
             date={item.date}
           />
         ))}
+      </div>
+
+      {/*------------------------------ Tabs -----------------------------*/}
+      <div className="flex justify-between mx-10 my-32 font-vazir">
+        <div className="w-3/4">
+          <Tabs>
+            <Tab label="شام">
+              <div className="py-4 flex justify-around my-8">
+                <FoodItem />
+                <FoodItem />
+                <FoodItem />
+              </div>
+            </Tab>
+            <Tab label="ناهار">
+              <div className="py-4 flex justify-around my-8">
+                <FoodItem />
+              </div>
+            </Tab>
+            <Tab label="صبحانه">
+              <div className="py-4 flex justify-around my-8">
+                <FoodItem />
+                <FoodItem />
+              </div>
+            </Tab>
+          </Tabs>
+        </div>
+        <div className="relative w-1/5 h-6 my-2 text-xl mx-auto text-center">
+          مشاهده و سفارش غذا
+          <div className="absolute right-0 w-1/2 h-1.5 bg-secondary -bottom-3 transform -translate-x-1/2"></div>
+        </div>
       </div>
     </>
   );
