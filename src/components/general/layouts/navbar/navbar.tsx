@@ -15,8 +15,8 @@ const Navbar: FC = () => {
   // navItems
   const navItems = [
     { path: "/", link: "خانه" },
-    { path: "/about", link: "درباره ما" },
-    { path: "/blogs", link: "رزرو‌ها" },
+    { path: "/dashboard", link: "داشبورد" },
+    { path: "/login", link: "لاگین" },
     { path: "/contact", link: "تماس با ما" },
   ];
   return (
