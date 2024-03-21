@@ -17,44 +17,36 @@ const AppRouter: FC = () => {
       element: (
         <Suspense fallback={<div>Loading...</div>}>
           <MainLayout />
+          <Home />
         </Suspense>
       ),
-      children: [
-        {
-          path: "/",
-          element: (
-            <Suspense fallback={<div>Loading...</div>}>
-              <Home />
-            </Suspense>
-          ),
-        },
-        {
-          path: "/dashboard",
-          element: (
-            <Suspense fallback={<div>Loading...</div>}>
-              <Dashboard />
-            </Suspense>
-          ),
-        },
-        {
-          path: "/login",
-          element: (
-            <Suspense fallback={<div>Loading...</div>}>
-              <Login />
-            </Suspense>
-          ),
-        },
-        {
-          path: "/contact",
-          element: (
-            <Suspense fallback={<div>Loading...</div>}>
-              <Contact />
-            </Suspense>
-          ),
-        },
-      ],
+    },
+    {
+      path: "/dashboard",
+      element: (
+        <Suspense fallback={<div>Loading...</div>}>
+          <Dashboard />
+        </Suspense>
+      ),
+    },
+    {
+      path: "/login",
+      element: (
+        <Suspense fallback={<div>Loading...</div>}>
+          <Login />
+        </Suspense>
+      ),
+    },
+    {
+      path: "/contact",
+      element: (
+        <Suspense fallback={<div>Loading...</div>}>
+          <Contact />
+        </Suspense>
+      ),
     },
   ]);
+  
   return <RouterProvider router={router} />;
 };
 
