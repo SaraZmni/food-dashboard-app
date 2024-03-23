@@ -11,6 +11,7 @@ module.exports = {
         success: "#42c486",
         light: "#ffeae6",
         layout: "#FFAA33",
+        crystal: "rgba(255,255,255,0.17)",
       },
       fontFamily: {
         vazir: ["Vazir"],
