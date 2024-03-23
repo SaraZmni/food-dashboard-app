@@ -4,6 +4,7 @@ import Card from "@components/card/card";
 
 import { FaAngleLeft } from "react-icons/fa6";
 import { FaAngleRight } from "react-icons/fa6";
+
 import Title from "../title/title";
 
 interface CardType {
