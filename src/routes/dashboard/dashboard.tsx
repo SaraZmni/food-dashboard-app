@@ -1,3 +1,4 @@
+import { Sample } from "@components/sample";
 import { FC, useState } from "react";
 
 import { FaAngleLeft } from "react-icons/fa6";
@@ -10,6 +11,7 @@ import { FaBilibili } from "react-icons/fa6";
 
 const Dashboard: FC = () => {
   const [open, setOpen] = useState(true);
+  const [activeId, setActiveId] = useState(0);
   const Menus = [
     { title: "داشبورد", icon: <FaChartSimple />, gap: false },
     { title: "حساب کاربری", icon: <FaAddressBook />, gap: false },
@@ -49,10 +51,13 @@ const Dashboard: FC = () => {
             <li
               className={`${
                 open ? "w-10/12" : "w-2 justify-center"
-              } w-10/12 text-white cursor-pointer text-md flex items-center mx-auto gap-x-4 hover:bg-crystal rounded-md px-5 py-3 ${
+              } w-10/12 text-slate-100 hover:text-white active:bg-crystal cursor-pointer text-md flex items-center ${
+                activeId === index ? "bg-crystal" : ""
+              } mx-auto gap-x-4 hover:bg-crystal rounded-md px-5 py-3 ${
                 menu.gap ? "mt-10" : " mt-2"
               }`}
               key={index}
+              onClick={() => setActiveId(index)}
             >
               <div>{menu.icon}</div>
               <span
@@ -67,9 +72,8 @@ const Dashboard: FC = () => {
         </ul>
       </div>
 
-      <div className="p-7 text-2xl font-semibold flex-1 h-screen">
-        <h1>Home page</h1>
-        <div></div>
+      <div className="p-7 text-2xl font-semibold flex-1 h-screen bg-slate-100 flex flex-grow flex-col">
+        <Sample />
       </div>
     </div>
   );
