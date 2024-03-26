@@ -1,3 +1,5 @@
+import AddFoods from "@components/add-foods/add-foods";
+import FoodTable from "@components/food-table/food-table";
 import { Sample } from "@components/sample";
 import { FC, useState } from "react";
 
@@ -14,10 +16,23 @@ const Dashboard: FC = () => {
   const [activeId, setActiveId] = useState(0);
   const Menus = [
     { title: "داشبورد", icon: <FaChartSimple />, gap: false },
-    { title: "حساب کاربری", icon: <FaAddressBook />, gap: false },
     { title: "لیست غذا", icon: <FaBowlFood />, gap: true },
     { title: "افرودن غذا", icon: <FaCalendarDays />, gap: false },
+    { title: "حساب کاربری", icon: <FaAddressBook />, gap: false },
   ];
+
+  const renderPages = () => {
+    switch (activeId) {
+      case 0:
+        return <Sample />;
+      case 1:
+        return <FoodTable />;
+      case 2:
+        return <AddFoods />;
+      default:
+        return;
+    }
+  };
   return (
     <div className="flex font-vazir">
       <div
@@ -73,7 +88,7 @@ const Dashboard: FC = () => {
       </div>
 
       <div className="p-7 text-2xl font-semibold flex-1 h-screen bg-slate-100 flex flex-grow flex-col">
-        <Sample />
+        {renderPages()}
       </div>
     </div>
   );
