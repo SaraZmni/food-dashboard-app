@@ -29,7 +29,7 @@ const Sidebar: FC<SidebarProps> = ({ sendActiveId }) => {
     >
       {/* Add Button */}
       <div
-        className="absolute w-7 h-7 border-2  cursor-pointer -right-3 top-9  border-layout rounded-full text-center bg-white flex items-center justify-center"
+        className="absolute w-7 h-7 border-2  cursor-pointer -right-3 top-20  border-layout rounded-full text-center bg-white flex items-center justify-center"
         onClick={() => setOpen((prevState) => !prevState)}
       >
         {open ? <FaAngleLeft /> : <FaAngleRight />}
