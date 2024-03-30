@@ -8,7 +8,6 @@ const AddFoods: FC = () => {
           افزودن غذا
         </h1>
 
-        {/* className="h-10 w-full rounded-lg border-2 pl-5 pr-4 text-sm placeholder-slate-400 focus:border-slate-400 focus:outline-none sm:text-base" */}
         <form action="">
           <div className="grid grid-cols-1 gap-6 mt-4 sm:grid-cols-2">
             <div>

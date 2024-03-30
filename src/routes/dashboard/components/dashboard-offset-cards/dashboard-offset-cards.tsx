@@ -16,16 +16,14 @@ const DashboardOffsetCards: FC = () => {
 
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-3 ">
           <div className="p-2 sm:p-10 text-center cursor-pointer">
-            <div className="py-16 max-w-sm rounded overflow-hidden shadow-lg hover:bg-white transition duration-500  bg-white">
+            <div className="py-16 max-w-sm rounded overflow-hidden shadow-lg bg-white hover:text-white hover:bg-secondary transition duration-500">
               <div className="flex flex-col items-center">
                 <FaBowlFood />
 
                 <div className="px-6 py-4">
                   <div className="space-y-5">
-                    <div className="text-base font-semibold text-slate-700 mb-2">
-                      لیست غذا
-                    </div>
-                    <p className="text-gray-700 text-sm">
+                    <div className="text-base font-semibold mb-2">لیست غذا</div>
+                    <p className="text-sm">
                       شما می توانید لیست غذاهای سفارشی را ببینید
                     </p>
                   </div>
@@ -34,8 +32,8 @@ const DashboardOffsetCards: FC = () => {
             </div>
           </div>
 
-          <div className="p-2 sm:p-10 text-center cursor-pointer text-white">
-            <div className="py-16 max-w-sm rounded overflow-hidden shadow-lg bg-secondary hover:bg-red-500 transition duration-500">
+          <div className="p-2 sm:p-10 text-center cursor-pointer">
+            <div className="py-16 max-w-sm rounded overflow-hidden shadow-lg bg-white text-slate-700 hover:bg-secondary hover:text-white transition duration-500">
               <div className="flex flex-col items-center">
                 <FaCalendarDays />
                 <div className="px-6 py-4">
@@ -53,16 +51,16 @@ const DashboardOffsetCards: FC = () => {
           </div>
 
           <div className="p-2 sm:p-10 text-center cursor-pointer translate-x-2">
-            <div className="py-16 max-w-sm rounded overflow-hidden shadow-lg hover:bg-white transition duration-500 bg-white ">
+            <div className="py-16 max-w-sm rounded overflow-hidden shadow-lg bg-white text-slate-700 hover:bg-secondary hover:text-white transition duration-500">
               <div className="flex flex-col items-center">
                 <FaAddressBook />
 
-                <div className="px-6 py-4">
+                <div className="px-6 py-4 ">
                   <div className="space-y-5">
-                    <div className="text-base font-semibold text-slate-700 mb-2">
+                    <div className="text-base font-semibold  mb-2">
                       حساب کاربری
                     </div>
-                    <p className="text-gray-700 text-sm">
+                    <p className="text-sm">
                       شما می توانید حساب کاربری خود را مشاهده و ویرایش کنید
                     </p>
                   </div>
