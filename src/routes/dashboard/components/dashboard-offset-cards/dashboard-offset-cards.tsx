@@ -7,7 +7,7 @@ import { FaAddressBook } from "react-icons/fa6";
 const DashboardOffsetCards: FC = () => {
   return (
     <div>
-      <div className="bannerFondo bg-blue-600 h-96 font-vazir"></div>
+      <div className="bannerFondo bg-blue-400 h-96 font-vazir"></div>
 
       <div className="-mt-64 ">
         <div className="w-full text-center">

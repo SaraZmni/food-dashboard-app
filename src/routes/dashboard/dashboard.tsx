@@ -29,10 +29,6 @@ const Dashboard: FC = () => {
   };
   return (
     <div className="flex font-vazir">
-      <aside className="sticky top-0 h-screen">
-        <Sidebar sendActiveId={reciveActiveId} />
-      </aside>
-
       <main
         role="main"
         className="-ml-64 flex flex-grow flex-col transition-all duration-150 ease-in md:ml-0"
@@ -43,6 +39,9 @@ const Dashboard: FC = () => {
           {renderPages()}
         </div>
       </main>
+      <aside className="sticky top-0 h-screen">
+        <Sidebar sendActiveId={reciveActiveId} />
+      </aside>
     </div>
   );
 };
