@@ -32,7 +32,7 @@ const Sidebar: FC<SidebarProps> = ({ sendActiveId }) => {
         className="absolute w-7 h-7 border-2  cursor-pointer -left-3 top-20  border-layout rounded-full text-center bg-white flex items-center justify-center"
         onClick={() => setOpen((prevState) => !prevState)}
       >
-        {open ? <FaAngleLeft /> : <FaAngleRight />}
+        {open ? <FaAngleRight /> : <FaAngleLeft />}
       </div>
       {/* Title */}
       <div className="text-white flex justify-end gap-x-4 items-center">
