@@ -29,17 +29,13 @@ const Sidebar: FC<SidebarProps> = ({ sendActiveId }) => {
     >
       {/* Add Button */}
       <div
-        className="absolute w-7 h-7 border-2  cursor-pointer -right-3 top-20  border-layout rounded-full text-center bg-white flex items-center justify-center"
+        className="absolute w-7 h-7 border-2  cursor-pointer -left-3 top-20  border-layout rounded-full text-center bg-white flex items-center justify-center"
         onClick={() => setOpen((prevState) => !prevState)}
       >
-        {open ? <FaAngleLeft /> : <FaAngleRight />}
+        {open ? <FaAngleRight /> : <FaAngleLeft />}
       </div>
       {/* Title */}
-      <div className="text-white flex gap-x-4 items-center">
-        <div>
-          <FaBilibili className="text-3xl duration-500" />
-        </div>
-
+      <div className="text-white flex justify-end gap-x-4 items-center">
         <h1
           className={`origin-left font-medium duration-300 ${
             !open && "scale-0"
@@ -47,13 +43,16 @@ const Sidebar: FC<SidebarProps> = ({ sendActiveId }) => {
         >
           سامانه تغذیه
         </h1>
+        <div>
+          <FaBilibili className="text-3xl duration-500" />
+        </div>
       </div>
       <ul className="pt-6">
         {Menus.map((menu, index) => (
           <li
             className={`${
               open ? "w-10/12" : "w-2 justify-center"
-            } w-10/12 text-slate-100 hover:text-white active:bg-crystal cursor-pointer text-md flex items-center ${
+            } w-10/12 text-slate-100 hover:text-white active:bg-crystal cursor-pointer text-md flex justify-end items-center ${
               activeId === index ? "bg-crystal" : ""
             } mx-auto gap-x-4 hover:bg-crystal rounded-md px-5 py-3 ${
               menu.gap ? "mt-10" : " mt-2"
@@ -63,7 +62,6 @@ const Sidebar: FC<SidebarProps> = ({ sendActiveId }) => {
               sendActiveId(index), setActiveId(index);
             }}
           >
-            <div>{menu.icon}</div>
             <span
               className={`text-sm ${
                 !open && "hidden"
@@ -71,6 +69,7 @@ const Sidebar: FC<SidebarProps> = ({ sendActiveId }) => {
             >
               {menu.title}
             </span>
+            <div>{menu.icon}</div>
           </li>
         ))}
       </ul>
