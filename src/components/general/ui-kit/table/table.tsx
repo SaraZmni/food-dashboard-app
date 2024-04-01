@@ -2,7 +2,7 @@ import { FC } from "react";
 
 const Table: FC = () => {
   return (
-    <div className="mt-8 flex flex-col">
+    <div className="mt-8 flex flex-col" dir="rtl">
       <div className="-mx-4 -my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
         <div className="inline-block min-w-full py-2 align-middle md:px-6 lg:px-8">
           <div className="overflow-hidden shadow ring-1 ring-black ring-opacity-5 md:rounded-lg">
@@ -11,25 +11,25 @@ const Table: FC = () => {
                 <tr>
                   <th
                     scope="col"
-                    className="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-slate-900 sm:pl-6"
+                    className="py-3.5 pl-4 pr-3 text-right text-sm font-semibold text-slate-900 sm:pl-6"
                   >
-                    Flight Number
+                    نام غذا
                   </th>
                   <th
                     scope="col"
-                    className="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-slate-900 sm:pl-6"
+                    className="py-3.5 pl-4 pr-3 text-right text-sm font-semibold text-slate-900 sm:pl-6"
                   >
-                    From
+                    تاریخ سفارش
                   </th>
                   <th
                     scope="col"
-                    className="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-slate-900 sm:pl-6"
+                    className="py-3.5 pl-4 pr-3 text-right text-sm font-semibold text-slate-900 sm:pl-6"
                   >
-                    To
+                    وعده غذایی
                   </th>
                   <th
                     scope="col"
-                    className="px-3 py-3.5 text-left text-sm font-semibold text-slate-900"
+                    className="px-3 py-3.5 text-right text-sm font-semibold text-slate-900"
                   >
                     <span className="sr-only">Edit</span>
                   </th>
@@ -41,22 +41,17 @@ const Table: FC = () => {
               <tbody className="divide-y divide-slate-200 bg-white">
                 <tr>
                   <td className="whitespace-nowrap py-4 pl-4 pr-3 text-sm sm:pl-6">
-                    <div className="font-medium text-slate-900">DD534</div>
+                    <div className="font-medium text-slate-900">قرمه سبزی</div>
                   </td>
                   <td className="whitespace-nowrap py-4 pl-4 pr-3 text-sm sm:pl-6">
                     <div className="flex flex-col items-start">
-                      <div className="font-medium text-slate-900">
-                        Don Mueang International Airport
-                      </div>
-                      <div className="text-slate-500">23 Feb 20:15</div>
+                      <div className="font-medium text-slate-900">سه شنبه</div>
+                      <div className="text-slate-500">سیزده فروردین 20:30</div>
                     </div>
                   </td>
                   <td className="whitespace-nowrap py-4 pl-4 pr-3 text-sm sm:pl-6">
                     <div className="flex flex-col items-start">
-                      <div className="font-medium text-slate-900">
-                        Phuket International Airport
-                      </div>
-                      <div className="text-slate-500">23 Feb 21:25</div>
+                      <div className="font-medium text-slate-900">ناهار</div>
                     </div>
                   </td>
                   <td className="relative whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-6">

@@ -2,7 +2,7 @@ import { FC } from "react";
 
 const AddFoods: FC = () => {
   return (
-    <div className="rounded-lg bg-white shadow font-vazir">
+    <div className="rounded-lg bg-white shadow font-vazir" dir="rtl">
       <section className="max-w-4xl p-6 mx-auto dark:bg-gray-800 mt-2">
         <h1 className="text-xl font-bold text-sm font-medium text-slate-700  dark:text-sm font-medium text-slate-700">
           افزودن غذا
@@ -59,13 +59,13 @@ const AddFoods: FC = () => {
               <div className="space-y-4 -mt-2 max-lg:mt-4">
                 <button
                   type="button"
-                  className="px-4 py-2 rounded-md bg-secondary text-white text-sm tracking-wider font-medium outline-none border-2 border-secondary mr-4"
+                  className="px-4 py-2 rounded-md bg-secondary text-white text-sm tracking-wider font-medium outline-none border-2 border-secondary ml-4"
                 >
                   وعده صبحانه
                 </button>
                 <button
                   type="button"
-                  className="px-4 py-2 rounded-md bg-transparent text-gray-400 text-sm tracking-wider font-medium outline-none border-2 border-gray-300 mr-4"
+                  className="px-4 py-2 rounded-md bg-transparent text-gray-400 text-sm tracking-wider font-medium outline-none border-2 border-gray-300 ml-4"
                 >
                   وعده ناهار
                 </button>
@@ -113,7 +113,7 @@ const AddFoods: FC = () => {
               >
                 انتخاب غذا
               </label>
-              <select className="block w-full pl-5 h-10 mt-2 text-sm text-gray-600 bg-white border border-gray-300 rounded-lg dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring">
+              <select className="block w-full pr-5 h-10 mt-2 text-sm text-gray-600 bg-white border border-gray-300 rounded-lg dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring">
                 <option>قرمه سبزی</option>
                 <option>قیمه</option>
                 <option>جوجه کباب</option>
