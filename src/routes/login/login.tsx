@@ -1,3 +1,5 @@
+import CreditCart from "@components/credit-cart/credit-cart";
+
 function Login() {
   return (
     <section className="h-screen flex flex-col md:flex-row justify-center space-y-10 md:space-y-0 md:space-x-16 items-center my-2 mx-5 md:mx-0 md:my-0">
@@ -48,6 +50,7 @@ function Login() {
           </a>
         </div>
       </div>
+      <CreditCart />
     </section>
   );
 }
