@@ -1,4 +1,4 @@
-import CreditCart from "@components/credit-cart/credit-cart";
+// import CreditCart from "@components/credit-cart/credit-cart";
 
 function Login() {
   return (
@@ -50,7 +50,7 @@ function Login() {
           </a>
         </div>
       </div>
-      <CreditCart />
+      {/* <CreditCart /> */}
     </section>
   );
 }
