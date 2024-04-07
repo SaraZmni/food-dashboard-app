@@ -46,7 +46,7 @@ const AppRouter: FC = () => {
       ),
     },
   ]);
-  
+
   return <RouterProvider router={router} />;
 };
 
