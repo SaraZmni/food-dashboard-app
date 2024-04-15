@@ -5,7 +5,7 @@ import { FaAngleRight } from "react-icons/fa6";
 import { FaBowlFood } from "react-icons/fa6";
 import { FaCalendarDays } from "react-icons/fa6";
 import { FaChartSimple } from "react-icons/fa6";
-// import { FaAddressBook } from "react-icons/fa6";
+import { FaAddressBook } from "react-icons/fa6";
 import { FaBilibili } from "react-icons/fa6";
 
 interface SidebarProps {
@@ -19,7 +19,7 @@ const Sidebar: FC<SidebarProps> = ({ sendActiveId }) => {
     { title: "داشبورد", icon: <FaChartSimple />, gap: false },
     { title: "لیست غذا", icon: <FaBowlFood />, gap: true },
     { title: "افرودن غذا", icon: <FaCalendarDays />, gap: false },
-    // { title: "حساب کاربری", icon: <FaAddressBook />, gap: false },
+    { title: "حساب کاربری", icon: <FaAddressBook />, gap: false },
   ];
   return (
     <div
