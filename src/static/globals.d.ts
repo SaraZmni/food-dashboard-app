@@ -1,0 +1,1 @@
+type LoadingEnum = 'success' | 'failed' | 'loading';
