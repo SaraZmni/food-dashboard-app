@@ -5,7 +5,7 @@ import { Tabs, Tab } from "@components/general/ui-kit/tabs/tabs";
 import { FoodList } from "@components/food-list";
 import { Slider } from "@components/general/ui-kit/slider";
 import Title from "@components/general/ui-kit/title/title";
-import OrderPanel from "@components/order-panel/order.panel";
+// import OrderPanel from "@components/order-panel/order.panel";
 
 const Home: FC = () => {
   return (
@@ -37,7 +37,7 @@ const Home: FC = () => {
         </div>
       </main>
       <aside className="sticky top-0 h-screen border">
-        <OrderPanel />
+        {/* <OrderPanel /> */}
       </aside>
     </div>
   );
