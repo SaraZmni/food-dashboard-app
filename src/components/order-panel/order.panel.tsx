@@ -1,10 +1,15 @@
 import CreditCart from "@components/credit-cart/credit-cart";
 import { FC, useState } from "react";
+import { useOrderBox } from "store/order-box";
 
 const OrderPanel: FC = () => {
   const [isExpand, setIsExpand] = useState(true);
   const [isExpandOnHover, setIsExpandOnHover] = useState(false);
+
   console.log("setIsExpandOnHover", setIsExpandOnHover);
+
+  const totalPrice = useOrderBox((state) => state.invoice.totalPrice);
+  const items = useOrderBox((state) => state.items);
 
   return (
     <nav
@@ -44,7 +49,15 @@ const OrderPanel: FC = () => {
           />
         </svg>
       </button>
-      {isExpand && <CreditCart />}
+      {isExpand && (
+        <>
+          <CreditCart />
+          <div>{totalPrice}</div>
+          {items.map((item) => {
+            return <div key={item.id}>{item.title}</div>;
+          })}
+        </>
+      )}
     </nav>
   );
 };
