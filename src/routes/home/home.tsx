@@ -37,7 +37,7 @@ const Home: FC = () => {
         </div>
       </main>
       <aside className="sticky top-0 h-screen border">
-        {/* <OrderPanel /> */}
+        <OrderPanel />
       </aside>
     </div>
   );
