@@ -1,3 +1,4 @@
+import OrderPanel from "@components/order-panel/order.panel";
 import { FC, Suspense } from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
@@ -42,6 +43,14 @@ const AppRouter: FC = () => {
       element: (
         <Suspense fallback={<div>Loading...</div>}>
           <Contact />
+        </Suspense>
+      ),
+    },
+    {
+      path: "/order",
+      element: (
+        <Suspense fallback={<div>Loading...</div>}>
+          <OrderPanel />
         </Suspense>
       ),
     },
