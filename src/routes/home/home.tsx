@@ -2,7 +2,7 @@ import { FC } from "react";
 import Banner from "@components/general/layouts/banner/banner";
 import { Tabs, Tab } from "@components/general/ui-kit/tabs/tabs";
 
-import { FoodList } from "@components/food-list";
+import { FoodList } from "@components/food/food-list";
 import { Slider } from "@components/general/ui-kit/slider";
 import Title from "@components/general/ui-kit/title/title";
 

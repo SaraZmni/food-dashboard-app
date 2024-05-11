@@ -1,4 +1,4 @@
-import { FoodItemType } from "@components/food-item/food-item-type"
+import { FoodItemType } from "@components/food/food-item/food-item-type"
 
 export interface OrderBoxItem extends FoodItemType {
  quantity:number;
