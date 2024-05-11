@@ -1,6 +1,7 @@
-import OrderPanel from "@components/order-panel/order.panel";
 import { FC, Suspense } from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
+import OrderPanel from "@components/order-panel/order-panel";
 
 // Lazy load the components
 const Home = React.lazy(() => import("@routes/home/home"));

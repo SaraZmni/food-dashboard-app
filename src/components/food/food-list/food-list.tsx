@@ -1,4 +1,4 @@
-import { FoodItem } from "@components/food-item";
+import { FoodItem } from "@components/food/food-item";
 import { FC } from "react";
 
 const FoodList: FC = () => {

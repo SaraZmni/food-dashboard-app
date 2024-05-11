@@ -1,5 +1,5 @@
-import AddFoods from "@components/add-foods/add-foods";
-import FoodTable from "@components/food-table/food-table";
+import AddFoods from "@components/food/add-foods/add-foods";
+import FoodTable from "@components/food/food-table/food-table";
 import { FC, useState } from "react";
 
 import { FaBowlFood } from "react-icons/fa6";

@@ -1,6 +1,6 @@
 import { FC, useState } from "react";
-import AddFoods from "@components/add-foods/add-foods";
-import FoodTable from "@components/food-table/food-table";
+import AddFoods from "@components/food/add-foods/add-foods";
+import FoodTable from "@components/food/food-table/food-table";
 import Sidebar from "@components/general/layouts/sidebar/sidebar";
 // import { Sample } from "@components/sample";
 import PathHinter from "@components/general/layouts/path-hinter/path-hinter";
