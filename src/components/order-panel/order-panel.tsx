@@ -1,22 +1,12 @@
 // import CreditCart from "@components/credit-cart/credit-cart";
 import { FC } from "react";
 import Order from "./components/order";
-import { OrderItemTypes } from "./order-panel-types";
-// import { useOrderBox } from "store/order-box";
+import { useOrderBox } from "store/order-box";
 
 const OrderPanel: FC = () => {
-  // const totalPrice = useOrderBox((state) => state.invoice.totalPrice);
-  // const items = useOrderBox((state) => state.items);
-
-  const orders: OrderItemTypes[] = [
-    {
-      id: 1,
-      title: "Iphone 6S",
-      brand: "Apple",
-      price: 400.0,
-      totalPrice: 400.0,
-    },
-  ];
+  const items = useOrderBox((state) => state.items);
+  const totalPrice = useOrderBox((state) => state.invoice.totalPrice);
+  const { removeOrderBoxItem } = useOrderBox((state) => state.actions);
 
   return (
     <>
@@ -47,10 +37,12 @@ const OrderPanel: FC = () => {
                 جمع کل
               </h3>
             </div>
-            {orders.map((order) => (
-              <div key={order.id}>
-                <Order item={order} />
-              </div>
+            {items.map((item) => (
+              <Order
+                key={item.id}
+                {...item}
+                onRemoveItem={() => removeOrderBoxItem(item)}
+              />
             ))}
 
             <div className="flex items-center hover:bg-gray-100 -mx-8 px-6 py-5">
@@ -200,7 +192,7 @@ const OrderPanel: FC = () => {
             <div className="border-t mt-8">
               <div className="flex font-semibold justify-between py-6 text-sm uppercase">
                 <span>مجموع هزینه</span>
-                <span>$600</span>
+                <span>{totalPrice}</span>
               </div>
               <button className="bg-indigo-500 font-semibold hover:bg-indigo-600 py-3 text-sm text-white uppercase w-full">
                 تسویه حساب
