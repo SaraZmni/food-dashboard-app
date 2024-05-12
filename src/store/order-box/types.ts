@@ -12,7 +12,7 @@ export interface OrderBox {
         totalPrice:number
     },
     actions: {
-        addOrderBoxItem: (item:OrderBoxItem) => void,
+        addOrderBoxItem: (item:FoodItemType) => void,
         removeOrderBoxItem:(item:OrderBoxItem) => void
     }
 }
