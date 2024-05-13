@@ -1,12 +1,18 @@
 import { FC, useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import "./navbar.styles.css";
 import { FaBars, FaXmark } from "react-icons/fa6";
 import { FaBagShopping } from "react-icons/fa6";
 import logo from "@static/images/favicon.png";
+import { useOrderBox } from "store/order-box";
+import { OrderBoxItem } from "store/order-box/types";
 
 const Navbar: FC = () => {
+  const navigate = useNavigate();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const foodItems = useOrderBox((store) => store.items);
+  const totalItems = calculateTotalFoods(foodItems);
 
   const toggleMenu = () => {
     setIsMenuOpen((prevState) => !prevState);
@@ -25,11 +31,11 @@ const Navbar: FC = () => {
         {/* menu icons */}
         <div className="text-white lg:flex gap-4 items-center hidden font-vazir">
           <div className="flex items-center text-gray-700 hover:text-secondary transition relative">
-            <div className="text-xl">
+            <div className="text-xl" onClick={() => navigate("/order")}>
               <FaBagShopping />
             </div>
             <span className="absolute -right-3 -top-1 w-5 h-5 rounded-full flex items-center justify-center bg-secondary text-white text-xs">
-              8
+              {totalItems}
             </span>
           </div>
           <button className="text-gray-800 px-2 py-1 text-sm rounded hover:text-secondary transition-all duration-200 ease-in">
@@ -80,14 +86,16 @@ const Navbar: FC = () => {
         >
           {navItems.map(({ path, link }) => (
             <li className="text-blue-950" key={path}>
-              <NavLink onClick={toggleMenu} to={path}>
-                {link}
-              </NavLink>
+              <NavLink to={path}>{link}</NavLink>
             </li>
           ))}
         </ul>
       </div>
     </header>
   );
+};
+
+const calculateTotalFoods = (foodItems: OrderBoxItem[]) => {
+  return foodItems.reduce((total, item) => total + item.quantity, 0);
 };
 export default Navbar;
