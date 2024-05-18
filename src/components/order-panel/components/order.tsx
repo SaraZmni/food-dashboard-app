@@ -17,15 +17,15 @@ const Order: FC<OrderProps> = ({
 }) => {
   return (
     <div className="flex items-center hover:bg-gray-100 -mx-8 px-6 py-5">
-      <div className="flex w-2/5">
-        <div className="w-20">
+      <div className="flex w-2/5 p1-4">
+        <div className="w-28">
           <img className="h-24" src={imageSrc} alt={imageAlt ?? ""} />
         </div>
-        <div className="flex flex-col justify-between ml-4 flex-grow">
+        <div className="flex flex-col justify-between mr-4 flex-grow">
           <span className="font-bold text-sm">{title}</span>
           <span className="text-red-500 text-xs">{meal}</span>
           <button
-            className="font-semibold hover:text-red-500 text-gray-500 text-xs"
+            className="font-semibold hover:text-red-500 text-gray-500 text-xs text-right w-10"
             onClick={() => onRemoveItem()}
           >
             حذف

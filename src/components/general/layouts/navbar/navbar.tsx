@@ -3,7 +3,7 @@ import { NavLink, useNavigate } from "react-router-dom";
 import "./navbar.styles.css";
 import { FaBars, FaXmark } from "react-icons/fa6";
 import { FaBagShopping } from "react-icons/fa6";
-import logo from "@static/images/favicon.png";
+// import logo from "@static/images/favicon.png";
 import { useOrderBox } from "store/order-box";
 import { OrderBoxItem } from "store/order-box/types";
 
@@ -62,7 +62,7 @@ const Navbar: FC = () => {
           ))}
         </ul>
         {/* Logo */}
-        <img src={logo} alt="" width={50} height={50} />
+        {/* <img src={logo} alt="" width={50} height={50} /> */}
 
         {/* mobile menu btn, display mobile screen */}
         <div className="md:hidden">
