@@ -4,6 +4,7 @@ import FoodTable from "@components/food/food-table/food-table";
 import Sidebar from "@components/general/layouts/sidebar/sidebar";
 // import { Sample } from "@components/sample";
 import PathHinter from "@components/general/layouts/path-hinter/path-hinter";
+import EditProfile from "@components/edit-profile/edit-profile";
 import DashboardHeader from "@routes/dashboard/components/dashboard-header/dashboard-header";
 import DashboardOffsetCards from "./components/dashboard-offset-cards/dashboard-offset-cards";
 
@@ -23,6 +24,8 @@ const Dashboard: FC = () => {
         return <FoodTable />;
       case 2:
         return <AddFoods />;
+      case 3:
+        return <EditProfile />;
       default:
         return;
     }
