@@ -4,7 +4,7 @@ const AddFoods: FC = () => {
   return (
     <div className="rounded-lg bg-white shadow font-vazir" dir="rtl">
       <section className="max-w-4xl p-6 mx-auto dark:bg-gray-800 mt-2">
-        <h1 className="text-xl font-bold text-sm font-medium text-slate-700  dark:text-sm font-medium text-slate-700">
+        <h1 className="font-bold text-sm  text-slate-700  dark:text-sm">
           افزودن غذا
         </h1>
 
@@ -146,7 +146,7 @@ const AddFoods: FC = () => {
               ></textarea>
             </div>
             <div>
-              <label className="block mt-2 text-sm font-medium text-sm font-medium text-slate-700">
+              <label className="block mt-2 text-sm font-medium  text-slate-700">
                 انتخاب تصویر
               </label>
               <div className="mt-3 flex justify-center px-6 pt-5 pb-6 border-2 border-gray-300 border-dashed rounded-md">
@@ -182,7 +182,7 @@ const AddFoods: FC = () => {
                       or drag and drop
                     </p>
                   </div>
-                  <p className="text-xs text-sm font-medium text-slate-700">
+                  <p className="text-sm font-medium text-slate-700">
                     PNG, JPG, GIF up to 10MB
                   </p>
                 </div>
@@ -190,7 +190,7 @@ const AddFoods: FC = () => {
             </div>
           </div>
           <div className="flex mt-10">
-            <button className="hover:shadow-form w-full rounded-md bg-success py-3 px-8 text-center font-semibold text-sm font-medium text-white outline-none">
+            <button className="hover:shadow-form w-full rounded-md bg-success py-3 px-8 text-center text-sm font-medium text-white outline-none">
               ذخیره
             </button>
           </div>
