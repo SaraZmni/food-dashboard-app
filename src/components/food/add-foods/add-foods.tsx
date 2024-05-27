@@ -3,8 +3,8 @@ import { FC } from "react";
 const AddFoods: FC = () => {
   return (
     <div className="rounded-lg bg-white shadow font-vazir" dir="rtl">
-      <section className="max-w-4xl p-6 mx-auto dark:bg-gray-800 mt-2">
-        <h1 className="font-bold text-sm  text-slate-700  dark:text-sm">
+      <section className="max-w-4xl p-6 mx-auto dark:bg-gray-800 mt-2 font-bold sm:text-xl">
+        <h1 className="font-bold text-2xl  text-slate-700  dark:text-sm">
           افزودن غذا
         </h1>
 
