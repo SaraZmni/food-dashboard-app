@@ -2,10 +2,12 @@
 import { FC } from "react";
 import Order from "./components/order";
 import { useOrderBox } from "store/order-box";
-import { useNavigate } from "react-router";
+
+import { useNavigate } from "react-router-dom";
 
 const OrderPanel: FC = () => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
+
   const items = useOrderBox((state) => state.items);
   const totalPrice = useOrderBox((state) => state.invoice.totalPrice);
   const { removeOrderBoxItem } = useOrderBox((state) => state.actions);
