@@ -2,8 +2,10 @@
 import { FC } from "react";
 import Order from "./components/order";
 import { useOrderBox } from "store/order-box";
+import { useNavigate } from "react-router-dom";
 
 const OrderPanel: FC = () => {
+  const navigate = useNavigate();
   const items = useOrderBox((state) => state.items);
   const totalPrice = useOrderBox((state) => state.invoice.totalPrice);
   const { removeOrderBoxItem } = useOrderBox((state) => state.actions);
@@ -48,6 +50,7 @@ const OrderPanel: FC = () => {
             <a
               href="#"
               className="flex font-semibold text-indigo-600 text-sm mt-10"
+              onClick={() => navigate("/")}
             >
               بازگشت به صفحه سفارشات
               <svg
