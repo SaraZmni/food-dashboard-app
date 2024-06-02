@@ -8,6 +8,7 @@ const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin'
 
 const stylesHandler = 'style-loader';
 const wsServerAddress = 'ws://localhost:' + process.env.DEV_SERVER_PORT + process.env.BASE_URL;
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 module.exports = [
     {
@@ -68,6 +69,7 @@ module.exports = [
             historyApiFallback: true,
           },
         plugins:[
+            new BundleAnalyzerPlugin(),
             new HtmlWebpackPlugin({
                 template:'./src/index.html',
                 favicon: './src/static/images/favicon.png',
